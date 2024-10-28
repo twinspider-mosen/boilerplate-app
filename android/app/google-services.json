@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "475261621498",
+    "project_id": "boilerplate-afc17",
+    "storage_bucket": "boilerplate-afc17.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:475261621498:android:36a0ab324489871b84e543",
+        "android_client_info": {
+          "package_name": "com.example.general_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmgyAtzDICmNW0WO2ZdZL9U90fYITW03A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
