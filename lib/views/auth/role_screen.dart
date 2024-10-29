@@ -54,8 +54,8 @@ class RoleScreen extends StatelessWidget {
                             onTap: () {
                               EasyLoading.show(status: "Loading...");
 
-                              cont.loginAsEmployee(
-                                  cont.auth.currentUser!.email ?? "");
+                              // cont.loginAsEmployee(
+                              //     cont.auth.currentUser!.email ?? "");
                             },
                             child: Container(
                               height: 130,
@@ -93,9 +93,9 @@ class RoleScreen extends StatelessWidget {
                             onTap: () {
                               EasyLoading.show(status: "Loading...");
 
-                              cont.loginAsShop(
-                                  isGoogleLogin: isGooleLogin,
-                                  default_membership: default_membership);
+                              // cont.loginAsShop(
+                              //     isGoogleLogin: isGooleLogin,
+                              //     default_membership: default_membership);
                               // cont.updateUserRole('shop');
                               // Get.to(() =>  CreateOrder());
                             },

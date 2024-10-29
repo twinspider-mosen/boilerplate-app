@@ -22,7 +22,10 @@ class SecurityQuestion extends StatelessWidget {
               backgroundColor: colorManager.bgColor,
               scrolledUnderElevation: 0,
               elevation: 0,
-              title: Text("Account Security"),
+              title: Text(
+                "Account Security",
+                style: TextStyle(color: colorManager.textColor),
+              ),
             ),
             body: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 18.0),

@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:general_app/controllers/Auth/authentication_controller.dart';
 import 'package:general_app/views/auth/login.dart';
+import 'package:general_app/views/dashboard/dashbaord.dart';
 
 import 'package:get/get.dart';
 
@@ -15,18 +16,15 @@ class SplashService {
     final user = auth.currentUser;
     if (user != null) {
       Timer(Duration(seconds: 3), () {
-        if (userRole == null) {
-          auth.signOut().then((v) {
-            Get.offAll(LoginScreen());
-          });
-          // Get.offAll(() => RoleScreen());
-        } else {
-          if (userRole == 'shop') {
-            authCont.loginAsShop();
-          } else {
-            authCont.loginAsEmployee(auth.currentUser!.email ?? "");
-          }
-        }
+        Get.offAll(Dashboard());
+        // if (userRole == null) {
+        //   auth.signOut().then((v) {
+        //     Get.offAll(LoginScreen());
+        //   });
+        //   // Get.offAll(() => RoleScreen());
+        // } else {
+        //   Get.offAll(Dashboard());
+        // }
       });
     } else {
       Timer(Duration(seconds: 3), () {

@@ -84,8 +84,9 @@ class AuthenticationController extends GetxController {
   void createAccount() {
     createAccountWithEmail(
             convertToEmail(phoneController.text), passController.text)
-        .then((v) {})
-        .onError((e, s) {
+        .then((v) {
+      createUserDocument();
+    }).onError((e, s) {
       EasyLoading.showError("Invalid Credentials!");
     });
   }
@@ -173,11 +174,14 @@ class AuthenticationController extends GetxController {
         password: pass,
       );
       clearControllers();
+
       update();
       Get.offAll(() => Dashboard());
     } catch (e) {
       print("Error: $e");
       EasyLoading.showError("Incorrect credentials!");
+    } finally {
+      EasyLoading.dismiss();
     }
   }
 
@@ -226,9 +230,7 @@ class AuthenticationController extends GetxController {
     });
   }
 
-  Future<void> createUserDocument(
-    String shopId,
-  ) async {
+  Future<void> createUserDocument() async {
     await db.doc(auth.currentUser!.uid.toString()).set({
       "name": nameController.text,
       "email": emailController.text,
@@ -266,6 +268,7 @@ class AuthenticationController extends GetxController {
       await auth
           .createUserWithEmailAndPassword(email: email, password: pass)
           .then((v) {
+        Get.offAll(Dashboard());
         EasyLoading.dismiss();
       });
     } catch (e) {
