@@ -83,13 +83,24 @@ class AuthenticationController extends GetxController {
 
   void createAccount() {
     createAccountWithEmail(
-            convertToEmail(phoneController.text), passController.text)
+            emailController.text, passController.text)
         .then((v) {
-      createUserDocument();
+      
     }).onError((e, s) {
       EasyLoading.showError("Invalid Credentials!");
     });
   }
+  
+  // void createAccount() {
+  //   createAccountWithEmail(
+  //           convertToEmail(phoneController.text), passController.text)
+  //       .then((v) {
+  //     createUserDocument();
+  //   }).onError((e, s) {
+  //     EasyLoading.showError("Invalid Credentials!");
+  //   });
+  // }
+
 
   clearControllers() {
     userCurrentRole = 'shop';
@@ -113,32 +124,41 @@ class AuthenticationController extends GetxController {
   }
 
   UserModel? user;
-
-  login() async {
-    String inputType = checkUserCred(generalController.text);
-    if (inputType == 'email') {
-      try {
-        QuerySnapshot querySnapshot =
-            await db.where("email", isEqualTo: generalController.text).get();
-
-        if (querySnapshot.docs.isNotEmpty) {
-          var data = querySnapshot.docs.first;
-          var email = convertToEmail(data['phone']);
-
-          signIn(email, passController.text);
-        } else {
-          print('No account found with the provided email.');
-          EasyLoading.showInfo('No account found with the provided email.');
-        }
-      } catch (e) {
-        print("Error: $e");
+login()async{
+  try{
+    EasyLoading.show(status: "Signing in...");
+    signIn(emailController.text, passController.text);
+  }catch(e){
+     print("Error: $e");
         EasyLoading.showError("Something went wrong!");
-      }
-    } else {
-      var email = convertToEmail(generalController.text);
-      signIn(email, passController.text);
-    }
   }
+}
+
+  // login() async {
+  //   String inputType = checkUserCred(generalController.text);
+  //   if (inputType == 'email') {
+  //     try {
+  //       QuerySnapshot querySnapshot =
+  //           await db.where("email", isEqualTo: generalController.text).get();
+
+  //       if (querySnapshot.docs.isNotEmpty) {
+  //         var data = querySnapshot.docs.first;
+  //         var email = convertToEmail(data['phone']);
+
+  //         signIn(email, passController.text);
+  //       } else {
+  //         print('No account found with the provided email.');
+  //         EasyLoading.showInfo('No account found with the provided email.');
+  //       }
+  //     } catch (e) {
+  //       print("Error: $e");
+  //       EasyLoading.showError("Something went wrong!");
+  //     }
+  //   } else {
+  //     var email = convertToEmail(generalController.text);
+  //     signIn(email, passController.text);
+  //   }
+  // }
 
   String defaultMembership = "";
   getDefaultMembershipStatus1() async {
@@ -268,7 +288,10 @@ class AuthenticationController extends GetxController {
       await auth
           .createUserWithEmailAndPassword(email: email, password: pass)
           .then((v) {
-        Get.offAll(Dashboard());
+            createUserDocument().then((val){
+ Get.offAll(Dashboard());
+            });
+       
         EasyLoading.dismiss();
       });
     } catch (e) {

@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -9,6 +11,17 @@ import 'package:get/get.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  if(Platform.isWindows){
+    await Firebase.initializeApp(
+     options: FirebaseOptions( apiKey: 'AIzaSyA-ouUuMf4UM_hzmTP0zYFHh6_2aDzhRPU',
+    appId: '1:995256357123:web:b0d3fe270afb01e9e85936',
+    messagingSenderId: '995256357123',
+    projectId: 'point-of-sale-b9555',
+    authDomain: 'point-of-sale-b9555.firebaseapp.com',
+    storageBucket: 'point-of-sale-b9555.firebasestorage.app',
+    measurementId: 'G-KL4PV2X4S7',)
+    );
+  }
   await Firebase.initializeApp();
   FirebaseFirestore.instance.settings = const Settings(
     persistenceEnabled: true,
