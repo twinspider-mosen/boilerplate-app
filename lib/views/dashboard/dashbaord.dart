@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:general_app/components/add_data_form.dart';
-import 'package:general_app/controllers/dashboard/dashboardController.dart';
-import 'package:general_app/views/auth/login.dart';
+import 'package:pos/components/add_data_form.dart';
+import 'package:pos/controllers/dashboard/dashboardController.dart';
+import 'package:pos/views/auth/login.dart';
 import 'package:get/get.dart';
 
 class Dashboard extends StatelessWidget {

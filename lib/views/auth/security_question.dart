@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:general_app/components/CustomButton.dart';
-import 'package:general_app/components/datePicker.dart';
-import 'package:general_app/controllers/Auth/authentication_controller.dart';
-import 'package:general_app/main.dart';
-import 'package:general_app/utility/constants.dart';
+import 'package:pos/components/CustomButton.dart';
+import 'package:pos/components/datePicker.dart';
+import 'package:pos/controllers/Auth/authentication_controller.dart';
+import 'package:pos/main.dart';
+import 'package:pos/utility/constants.dart';
 import 'package:get/get.dart';
 
 class SecurityQuestion extends StatelessWidget {

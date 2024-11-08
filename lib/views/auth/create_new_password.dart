@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:general_app/components/CustomButton.dart';
-import 'package:general_app/components/customInput.dart';
-import 'package:general_app/controllers/Auth/authentication_controller.dart';
-import 'package:general_app/main.dart';
+import 'package:pos/components/CustomButton.dart';
+import 'package:pos/components/customInput.dart';
+import 'package:pos/controllers/Auth/authentication_controller.dart';
+import 'package:pos/main.dart';
 import 'package:get/get.dart';
 
 class CreateNewPassword extends StatelessWidget {

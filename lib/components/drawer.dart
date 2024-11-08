@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:general_app/components/customSwitchButton.dart';
-import 'package:general_app/controllers/dashboard/drawerController.dart';
-import 'package:general_app/main.dart';
-import 'package:general_app/views/settings/appSettings.dart';
+import 'package:pos/components/customSwitchButton.dart';
+import 'package:pos/controllers/dashboard/drawerController.dart';
+import 'package:pos/main.dart';
+import 'package:pos/views/settings/appSettings.dart';
 import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';
 

@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "475261621498",
-    "project_id": "boilerplate-afc17",
-    "storage_bucket": "boilerplate-afc17.appspot.com"
+    "project_number": "995256357123",
+    "project_id": "point-of-sale-b9555",
+    "storage_bucket": "point-of-sale-b9555.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:475261621498:android:36a0ab324489871b84e543",
+        "mobilesdk_app_id": "1:995256357123:android:ee585d88119c6a83e85936",
         "android_client_info": {
-          "package_name": "com.example.general_app"
+          "package_name": "com.twinspider.pos"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDmgyAtzDICmNW0WO2ZdZL9U90fYITW03A"
+          "current_key": "AIzaSyBPcJ6GyUGXm9g21lMmM4tH2394DuNxWEo"
         }
       ],
       "services": {

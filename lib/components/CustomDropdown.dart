@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:general_app/main.dart';
+import 'package:pos/main.dart';
 import 'package:get/get.dart';
 
 class CustomDropdown extends StatefulWidget {

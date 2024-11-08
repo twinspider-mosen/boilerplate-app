@@ -3,10 +3,10 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:general_app/components/CustomButton.dart';
-import 'package:general_app/main.dart';
-import 'package:general_app/models/user_model.dart';
-import 'package:general_app/views/auth/login.dart';
+import 'package:pos/components/CustomButton.dart';
+import 'package:pos/main.dart';
+import 'package:pos/models/user_model.dart';
+import 'package:pos/views/auth/login.dart';
 import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';
 

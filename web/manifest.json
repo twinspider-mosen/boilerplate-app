@@ -1,6 +1,6 @@
 {
-    "name": "general_app",
-    "short_name": "general_app",
+    "name": "pos",
+    "short_name": "pos",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

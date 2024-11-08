@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:general_app/components/CustomButton.dart';
-import 'package:general_app/main.dart';
+import 'package:pos/components/CustomButton.dart';
+import 'package:pos/main.dart';
 
 class OtpScreen extends StatefulWidget {
   @override

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:general_app/components/CustomInputField.dart';
+import 'package:pos/components/CustomInputField.dart';
 import 'package:intl/intl.dart';
 
 class DatePickerField extends StatefulWidget {

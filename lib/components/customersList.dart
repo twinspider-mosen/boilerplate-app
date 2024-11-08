@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:general_app/components/customerCard.dart';
-import 'package:general_app/main.dart';
+import 'package:pos/components/customerCard.dart';
+import 'package:pos/main.dart';
 
 class CustomersList extends StatelessWidget {
   CustomersList({super.key});

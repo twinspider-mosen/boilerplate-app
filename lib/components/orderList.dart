@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:general_app/components/search/searchBox.dart';
-import 'package:general_app/main.dart';
+import 'package:pos/components/search/searchBox.dart';
+import 'package:pos/main.dart';
 import 'package:get/get.dart';
 
 class OrderList extends StatelessWidget {

@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:general_app/main.dart';
+import 'package:pos/main.dart';
 import 'package:get/get.dart';
 
 class ImageUpload extends StatelessWidget {

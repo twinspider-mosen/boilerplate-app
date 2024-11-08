@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:general_app/controllers/theme/theme_controller.dart';
-import 'package:general_app/main.dart';
-import 'package:general_app/services/appUpdate.dart';
-import 'package:general_app/services/splashServices.dart';
+import 'package:pos/controllers/theme/theme_controller.dart';
+import 'package:pos/main.dart';
+import 'package:pos/services/appUpdate.dart';
+import 'package:pos/services/splashServices.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

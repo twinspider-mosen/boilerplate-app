@@ -2,9 +2,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:general_app/controllers/theme/theme_controller.dart';
-import 'package:general_app/views/dashboard/dashbaord.dart';
-import 'package:general_app/views/splash/splashScreen.dart';
+import 'package:pos/controllers/theme/theme_controller.dart';
+import 'package:pos/views/dashboard/dashbaord.dart';
+import 'package:pos/views/splash/splashScreen.dart';
 import 'package:get/get.dart';
 
 void main() async {
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'BoilerPlate',
+      title: 'Point Of Sale ',
       home: SplashScreen(),
       builder: EasyLoading.init(),
     );
